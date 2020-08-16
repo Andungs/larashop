@@ -63,7 +63,8 @@
                 </li>
                 <li class="nav-header">Transaksi</li>
                 <li class="nav-item mb-1">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('transaction.index')}}"
+                        class="nav-link {{Request::segment(1)=='transaction'?'active':'' }}">
                         <i class="nav-icon fas fa-cart-plus"></i>
                         <p>
                             Daftar Transaksi

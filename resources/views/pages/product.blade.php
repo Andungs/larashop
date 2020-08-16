@@ -148,7 +148,8 @@
                 }
             ]
         });
-
+        let overlay =
+            '<div class="overlay d-flex justify-content-center align-items-center"><i class="fas fa-2x fa-sync fa-spin"></i></div> ';
         // btn add
         $('.add').click(function () {
             $('#id').val('');
@@ -159,6 +160,7 @@
         })
         $('#form').submit(function (event) {
             event.preventDefault();
+            $('.modal-content').append(overlay);
             console.log('submit');
             var form = $('#form')[0];
             var data = new FormData(form);
@@ -201,6 +203,7 @@
             $('.modal-header').removeClass('bg-teal');
             $('.modal-header').addClass('bg-warning');
             $('.modal-title').html('Edit Barang');
+            $('.modal-content').append(overlay);
             var id = $(this).data('id');
             $.get('product/' + id + '/edit', function (data) {
                 $('#id').val(data.id);
@@ -208,6 +211,7 @@
                 $('#category_id').val(data.category_id);
                 $('#price').val(data.price);
                 $('#quantity').val(data.quantity);
+                $('.overlay').remove();
             })
 
         })

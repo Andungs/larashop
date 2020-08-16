@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('gallery', 'GalleryProductController')->except([
         'show', 'create', 'update', 'edit'
     ]);
+    Route::resource('transaction', 'TransactionController');
 });
 
 Auth::routes(['register' => false]);

@@ -7,7 +7,7 @@
 @section('content')
 <div class="col-lg-12">
     <div class="card card-outline card-teal">
-        <div class="card-body p-0">
+        <div class="card-body p-1">
             <a href="javascript:void(0)" class="add btn btn-primary btn-sm float-right mb-3 mt-2 mr-1 shadow"><i
                     class="fas fa-edit"></i>
                 Tambah
